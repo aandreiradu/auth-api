@@ -32,4 +32,4 @@ Register/Auth API using express<br/>
 
 <hr/>
 
-<p>Recreated from scratch based on Dave Gray's NodeJS Crash Course. Link to YT channel : <a href='https://www.youtube.com/c/DaveGrayTeachesCode'>here</a>. Thanks Dave!</p>
+<p>Recreated from scratch based on Dave Gray's NodeJS Crash Course. Link to YT channel : <a href='https://www.youtube.com/c/DaveGrayTeachesCode' target="_blank">here</a>. Thanks Dave!</p>
