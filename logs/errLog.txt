@@ -1,0 +1,21 @@
+20220715	11:07:73	bd71eeb9-fe48-4940-b4c1-e9bfcbe906dd	TypeError: fsPromises.readFil is not a function
+20220716	01:07:26	8c8e2cca-e9e6-495d-9d23-57c63230bc82	Error: Not allowed by cors
+20220716	01:07:61	dcf9e41e-1b8c-4eb9-be31-06eef01399a6	ReferenceError: path is not defined
+20220716	01:07:65	1e6cf396-d7f6-4526-9059-059129d9afbd	Error: ENOENT: no such file or directory, stat '/Users/andreiradu/learning/nodejs course/Web Server/routes/views/index.html'
+20220717	07:07:07	030bc90b-aade-4528-8fa3-2b3458a2abca	ReferenceError: deleteEmployeeupdatedEmployees is not defined
+20220717	07:07:98	ef66cd48-5290-45a2-a24a-e3eef644a2d6	TypeError: Cannot set properties of undefined (setting 'firstname')
+20220717	07:07:40	a296db86-06c1-405c-ac9c-3f51f42a49b6	TypeError: Cannot set properties of undefined (setting 'firstname')
+20220717	07:07:97	c0c438ec-9e37-43a9-9193-4e3f907269fc	TypeError: Cannot read properties of undefined (reading 'id')
+20220717	07:07:87	a6461a22-16dc-4895-b768-be66dc9be576	TypeError: Cannot read properties of undefined (reading 'id')
+20220717	07:07:04	5ec9755a-db26-4593-b112-29ff743701c6	TypeError: Cannot read properties of undefined (reading 'id')
+20220717	07:07:36	d46d0804-ddca-4410-b18a-d1da4c759309	TypeError: Cannot read properties of undefined (reading 'id')
+20220717	07:07:34	ec8abea2-dc7a-4cd9-ac89-51651e976d06	TypeError: Cannot read properties of undefined (reading 'id')
+20220717	07:07:82	6fb3c6dc-e2aa-4c98-be20-f019d62f5787	TypeError: Cannot read properties of undefined (reading 'id')
+20220717	07:07:44	65bcafec-32fb-44c9-8945-da71e081eddd	TypeError: Cannot read properties of undefined (reading 'id')
+20220717	07:07:23	7b3a5b51-fe04-424e-87d4-c1b947f343ed	TypeError: Cannot read properties of undefined (reading 'id')
+20220717	07:07:42	1cd63410-f22f-43af-8d75-baedb8eecb3a	Error: Cannot set headers after they are sent to the client
+20220717	08:07:81	95438875-b0cf-410c-897b-059ecfc60c9c	TypeError: Cannot set properties of undefined (setting 'firstname')
+20220717	08:07:73	31fda5cf-7a59-4fdd-93bf-ba72f931e8d7	TypeError: Cannot set properties of undefined (setting 'firstname')
+20220717	08:07:23	e8797f2a-7ec4-44cc-9a2d-0127ccf805c3	TypeError: Cannot set properties of undefined (setting 'firstname')
+20220717	11:07:10	c33ced62-c519-4c71-939a-b02963ce27c6	TypeError: Cannot read properties of undefined (reading 'username')
+20220717	11:07:82	8922b68f-7e21-43d8-acde-6778cff80b5b	TypeError: Cannot read properties of undefined (reading 'username')
