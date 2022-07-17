@@ -29,3 +29,7 @@ Register/Auth API using express<br/>
         </div>
     </li>
 </ul>
+
+<hr/>
+
+<p>Recreated from scratch based on Dave Gray's NodeJS Crash Course. Link to YT channel : <a href='https://www.youtube.com/c/DaveGrayTeachesCode'>here</a>. Thanks Dave!</p>
