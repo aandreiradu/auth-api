@@ -16,14 +16,15 @@ Register/Auth API using express<br/>
         <div>
                 <p> 
                     '/employees' <br/>
-                    <span>GET -> returns all the employees. Needs authentification. Returns a list with all the users</span>
-                    <span>POST -> creates new user. Payload requires : firstname, lastname. Needs authentication and only users who are <b>'Admin' or 'Editor</b> can access this route. <b>Returns a list with all the useres</b></span>
-                    <span>PUT -> updates existing user. Payload requires: ID, firstname(optional),lastname(optional). Needs authentication and only users who are <b>'Admin' or 'Editor</b> can access this route. <b>Returns a list with the updated users</b></span>  
-                    <span>DELETE -> delete existing user. Payload requires ID. Needs authenticationd and only users who are <b>'Admin'</b> can access this route.</span>
+                    <span>GET -> returns all the employees. Needs authentification. Returns a list with all the users</span><br/>
+                    <span>POST -> creates new user. Payload requires : firstname, lastname. Needs authentication and only users who are <b>'Admin' or 'Editor</b> can access this route. <b>Returns a list with all the useres</b></span><br/>
+                    <span>PUT -> updates existing user. Payload requires: ID, firstname(optional),lastname(optional). Needs authentication and only users who are <b>'Admin' or 'Editor</b> can access this route. <b>Returns a list with the updated users</b></span><br/>
+                    <span>DELETE -> delete existing user. Payload requires ID. Needs authenticationd and only users who are <b>'Admin'</b> can access this route.</span><br/>
                 </p><br/>
+                <hr/>
                 <p>
                     '/employees/:id <br/>
-                    <span>Returns an user based on his id. Payload requires: ID</span>
+                    <span>Returns an user based on his id. Payload requires: ID</span><br/>
                 </p>
         </div>
     </li>
