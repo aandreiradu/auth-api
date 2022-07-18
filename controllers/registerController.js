@@ -1,13 +1,14 @@
-const fsPromises = require("fs").promises;
-const path = require("path");
+const User = require('../model/User');
 const bcrpyt = require("bcrypt");
+// const fsPromises = require("fs").promises;
+// const path = require("path");
 
-const usersDB = {
-  users: require("../model/users.json"),
-  setUser: function (data) {
-    this.users = data;
-  },
-};
+// const usersDB = {
+//   users: require("../model/users.json"),
+//   setUser: function (data) {
+//     this.users = data;
+//   },
+// };
 
 const handleNewUser = async (req, res) => {
   const { user, password } = req.body;
@@ -19,7 +20,8 @@ const handleNewUser = async (req, res) => {
   }
 
   //   check for duplicate to duplicates username;
-  const duplicate = usersDB.users?.find((person) => person.username === user);
+  // const duplicate = usersDB.users?.find((person) => person.username === user);
+  const duplicate = await User.findOne({username : user}).exec();
   if (duplicate) {
     return res.sendStatus(409);
   }
@@ -29,20 +31,27 @@ const handleNewUser = async (req, res) => {
     const hashedPwd = await bcrpyt.hash(password, 10);
 
     // store the new user;
-    const newUser = {
+    const result = await User.create({
       username: user,
-      roles: {
-        User: 2022,
-      },
+      // default roles is already set in the User model
+      // roles: {
+        // User: 2022,
+      // },
       password: hashedPwd,
-    };
+    });
+
+    console.log('RESULT INSERT',result);
+
 
     // insert the user
-    usersDB.setUser([...usersDB.users, newUser]);
-    await fsPromises.writeFile(
-      path.join(__dirname, "..", "model", "users.json"),
-      JSON.stringify(usersDB.users)
-    );
+    // usersDB.setUser([...usersDB.users, newUser]);
+    // await fsPromises.writeFile(
+    //   path.join(__dirname, "..", "model", "users.json"),
+    //   JSON.stringify(usersDB.users)
+    // );
+
+    // create and store the new user;
+    
 
     return res.status(201).json({ message: `New user ${user} created` });
   } catch (error) {
