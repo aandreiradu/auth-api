@@ -21,7 +21,6 @@ Register/Auth API using express<br/>
                     <span>PUT -> updates existing user. Payload requires: ID, firstname(optional),lastname(optional). Needs authentication and only users who are <b>'Admin' or 'Editor</b> can access this route. <b>Returns a list with the updated users</b></span><br/>
                     <span>DELETE -> delete existing user. Payload requires ID. Needs authenticationd and only users who are <b>'Admin'</b> can access this route.</span><br/>
                 </p><br/>
-                <hr/>
                 <p>
                     '/employees/:id <br/>
                     <span>Returns an user based on his id. Payload requires: ID</span><br/>
