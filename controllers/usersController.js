@@ -12,21 +12,18 @@ const getAllUsers = async (req, res) => {
 
 const deleteUser = async (req, res) => {
   const { id } = req.body;
-  console.log("deleteUser id", id);
 
   if (!id) {
     return res.status(400).json({ message: "ID is required!" });
   }
 
   const result = await User.deleteOne({ _id: id }).exec();
-  console.log("result delete user", result);
 
   return res.json(result);
 };
 
 const getUserById = async (req, res) => {
   const { id } = req.params;
-  console.log("id", id);
 
   if (!id) {
     return res.status(400).json({ message: `ID is required!` });
@@ -43,14 +40,12 @@ const getUserById = async (req, res) => {
 const addUserRoles = async (req, res) => {
   const ROLES_LIST = require("../config/roles_list");
   const { roleName, id } = req.body;
-  console.log("roleName", roleName);
 
   if (!roleName || !id) {
     return res.status(400).json({ message: "Role Name and ID are required!" });
   }
 
   const requestedRoles = Array.isArray(roleName) ? roleName : [roleName];
-  console.log("requestedRoles", requestedRoles);
 
   const insertedRoles = requestedRoles
     .map((role) => {
@@ -78,38 +73,32 @@ const addUserRoles = async (req, res) => {
     return false;
   });
 
-  console.log("uniqueRoles", uniqueRoles);
   if (uniqueRoles.length === 0) {
     return res.status(400).json({ message: "Role name/s not found!" });
   }
-
   const updatedUser = await User.findOne({ _id: id }).exec();
-  console.log("find updatedUser", updatedUser);
-
   if (!updatedUser) {
     return res.status(204).json({ message: `No user found for this ID ${id}` });
   }
 
-  
   const updatedUserJSObj = updatedUser.toObject();
-  console.log('before updating updatedUserJSObj', updatedUserJSObj);
 
-  uniqueRoles?.forEach(role => {
-    return updatedUserJSObj.roles = {
+  uniqueRoles?.forEach((role) => {
+    return (updatedUserJSObj.roles = {
       ...updatedUserJSObj.roles,
-      ...role
-    }
-  })
-
-  console.log('after updating updatedUserJSObj', updatedUserJSObj);
-
+      ...role,
+    });
+  });
   updatedUser.roles = updatedUserJSObj.roles;
 
   await updatedUser.save();
 
   return res
     .status(200)
-    .json({ message: `User with ID ${id} was updated successfully` , updatedUser});
+    .json({
+      message: `User with ID ${id} was updated successfully`,
+      updatedUser,
+    });
 };
 
 const removeUserRole = async (req, res) => {
@@ -157,7 +146,9 @@ const removeUserRole = async (req, res) => {
     return res.json({ message: `No roles found assigned to this user ${id}` });
   } else {
     const userFindJSObject = userFind.toObject();
-    assignedUserRoles.forEach((assigned) => delete userFindJSObject.roles[assigned]);
+    assignedUserRoles.forEach(
+      (assigned) => delete userFindJSObject.roles[assigned]
+    );
 
     userFind.roles = userFindJSObject.roles;
     const saveResponse = await userFind.save();

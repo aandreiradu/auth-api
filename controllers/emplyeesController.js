@@ -2,8 +2,6 @@ const Employee = require("../model/Employee");
 
 const getAllEmployees = async (req, res) => {
   const allEmployees = await Employee.find().exec();
-  console.log("allEmployees", allEmployees);
-
   if (!allEmployees) {
     return res.status(204).json({ message: "No employees found!" });
   }
@@ -67,7 +65,6 @@ const updateEmployee = async (req, res) => {
   }
 
   const result = await employee.save();
-  console.log("final result updateEmployee", result);
   return res.json(result);
 };
 
@@ -79,14 +76,12 @@ const deleteEmployee = async (req, res) => {
   }
 
   const existingEmployee = await Employee.findOne({ _id: id });
-  console.log("deleteEmployee existingEmployee result", existingEmployee);
 
   if (!existingEmployee) {
     return res.status(204).json({ message: `No user found with ID : ${id}` });
   }
 
   const result = await existingEmployee.deleteOne({ _id: id });
-  console.log("final result deleteEmployee", result);
 
   return res.json(result);
 };
