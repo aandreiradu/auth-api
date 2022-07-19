@@ -35,7 +35,7 @@ Register/Auth API using express<br/>
 <ul>
     <span>New features added</span> <br/>
     <li>
-        usersController : contains protected routes that allows users to :
+        usersController : contains protected routes that allows users to :<br/>
              Get all the users from db<br/> 
              Delete users from db<br/>
              Get a specific user based on his ID<br/>
