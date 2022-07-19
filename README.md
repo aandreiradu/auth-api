@@ -32,4 +32,18 @@ Register/Auth API using express<br/>
 
 <hr/>
 
-<p>Recreated from scratch based on Dave Gray's NodeJS Crash Course. Link to YT channel : <a href='https://www.youtube.com/c/DaveGrayTeachesCode' target="_blank">here</a>. Thanks Dave!</p>
+<ul>
+    <span>New features added</span> <br/>
+    <li>
+        usersController : contains protected routes that allows users to :
+             Get all the users from db<br/> 
+             Delete users from db<br/>
+             Get a specific user based on his ID<br/>
+             Add security roles to an existing user <br/>
+             Remove security roles from an existing user <br/>
+    </li>
+</ul><br/>
+
+<hr/>
+
+<p>Recreated from scratch based on Dave Gray's NodeJS Crash Course. Link to YT channel : <a href='https://www.youtube.com/c/DaveGrayTeachesCode' target="_blank">here</a>.</p>
